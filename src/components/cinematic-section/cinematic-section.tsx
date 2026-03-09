@@ -11,15 +11,15 @@ import { useRef } from "react";
 
 const storyMoments = [
   {
-    text: "Empresas nÃ£o precisam apenas existir online.",
+    text: "Empresas não precisam apenas existir online.",
     range: [0.02, 0.16, 0.28, 0.4] as const,
   },
   {
-    text: "Precisam de presenÃ§a digital profissional.",
+    text: "Precisam de presença digital profissional.",
     range: [0.3, 0.44, 0.58, 0.72] as const,
   },
   {
-    text: "Um bom site faz diferenÃ§a.",
+    text: "Um bom site faz diferença.",
     range: [0.62, 0.76, 0.9, 1] as const,
   },
 ];

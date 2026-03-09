@@ -7,7 +7,7 @@ import { ButtonLink } from "@/components/ui/button-link";
 
 const links = [
   { href: "#services", label: "Serviços" },
-  { href: "#why-lume", label: "Por que Lume" },
+  { href: "#why-lume", label: "Tecnologia" },
   { href: "#process", label: "Processo" },
   { href: "#projects", label: "Projetos" },
 ];
