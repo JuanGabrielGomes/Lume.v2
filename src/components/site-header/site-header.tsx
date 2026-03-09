@@ -40,16 +40,15 @@ export function SiteHeader() {
           aria-label="Lume Web"
           className="flex shrink-0 items-center rounded-full pr-2 md:pr-3"
         >
-          <span className="relative block h-9 w-[8.8rem] overflow-hidden sm:h-10 sm:w-[9.8rem] md:h-12 md:w-[11.6rem]">
-            <Image
-              src="/lume-logo-v2-1.png"
-              alt="Lume Web"
-              fill
-              priority
-              sizes="(max-width: 640px) 141px, (max-width: 768px) 157px, 186px"
-              className="object-cover object-[center_63%]"
-            />
-          </span>
+          <Image
+            src="/lume-logo-v2-1-header.png"
+            alt="Lume Web"
+            width={1200}
+            height={902}
+            priority
+            sizes="(max-width: 640px) 124px, (max-width: 768px) 138px, 164px"
+            className="h-7 w-auto max-w-none sm:h-8 md:h-9"
+          />
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">
