@@ -38,16 +38,16 @@ export function SiteHeader() {
         <a
           href="#main-content"
           aria-label="Lume Web"
-          className="flex shrink-0 items-center rounded-full pr-2 md:pr-3"
+          className="flex shrink-0 items-center rounded-full pr-3 md:pr-4"
         >
           <Image
             src="/lume-logo-v2-1-header.png"
             alt="Lume Web"
-            width={1000}
-            height={752}
+            width={1200}
+            height={424}
             priority
-            sizes="(max-width: 640px) 144px, (max-width: 1024px) 160px, 176px"
-            className="h-8 w-auto max-w-none sm:h-9 md:h-10"
+            sizes="(max-width: 640px) 168px, (max-width: 1024px) 184px, 208px"
+            className="h-9 w-auto max-w-none sm:h-10 md:h-11"
           />
         </a>
 
@@ -56,7 +56,7 @@ export function SiteHeader() {
             <a
               key={link.href}
               href={link.href}
-              className="rounded-full px-2.5 py-1.5 text-[0.92rem] text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0]"
+              className="rounded-full px-2.5 py-1.5 text-[0.9rem] leading-none text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0]"
             >
               {link.label}
             </a>
@@ -66,7 +66,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2 md:gap-2.5">
           <a
             href="#projects"
-            className="hidden rounded-full px-2.5 py-1.5 text-[0.92rem] text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0] md:block"
+            className="hidden rounded-full px-2.5 py-1.5 text-[0.9rem] leading-none text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0] md:block"
           >
             Ver projetos
           </a>
