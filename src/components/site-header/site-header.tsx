@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 
 const links = [
-  { href: "#services", label: "ServiÃƒÂ§os" },
+  { href: "#services", label: "Serviços" },
   { href: "#why-lume", label: "Tecnologia" },
   { href: "#process", label: "Processo" },
   { href: "#projects", label: "Projetos" },
@@ -33,7 +33,7 @@ export function SiteHeader() {
           backdropFilter: scrolled ? "blur(24px) saturate(140%)" : "blur(16px) saturate(120%)",
         }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border px-3 py-2.5 md:px-6 md:py-3"
+        className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border px-3 py-2.5 md:px-5 md:py-3"
       >
         <a
           href="#main-content"
@@ -43,34 +43,34 @@ export function SiteHeader() {
           <Image
             src="/lume-logo-v2-1-header.png"
             alt="Lume Web"
-            width={1200}
-            height={902}
+            width={1000}
+            height={752}
             priority
-            sizes="(max-width: 640px) 312px, (max-width: 768px) 344px, 392px"
-            className="h-[4.5rem] w-auto max-w-none sm:h-20 md:h-[5.5rem]"
+            sizes="(max-width: 640px) 144px, (max-width: 1024px) 160px, 176px"
+            className="h-8 w-auto max-w-none sm:h-9 md:h-10"
           />
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 lg:flex xl:gap-5">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="rounded-full px-3 py-2 text-sm text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0]"
+              className="rounded-full px-2.5 py-1.5 text-[0.92rem] text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0]"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-3">
+        <div className="flex items-center gap-2 md:gap-2.5">
           <a
             href="#projects"
-            className="hidden rounded-full px-3 py-2 text-sm text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0] md:block"
+            className="hidden rounded-full px-2.5 py-1.5 text-[0.92rem] text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0] md:block"
           >
             Ver projetos
           </a>
-          <ButtonLink href="#cta" className="px-4 py-2.5 text-[0.72rem] md:px-5 md:py-3 md:text-sm">
+          <ButtonLink href="#cta" className="px-3.5 py-2 text-[0.7rem] md:px-4.5 md:py-2.5 md:text-[0.82rem]">
             Criar meu site
           </ButtonLink>
         </div>
