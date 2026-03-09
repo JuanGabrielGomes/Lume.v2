@@ -6,7 +6,7 @@ import { useState } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 
 const links = [
-  { href: "#services", label: "Serviços" },
+  { href: "#services", label: "ServiÃ§os" },
   { href: "#why-lume", label: "Tecnologia" },
   { href: "#process", label: "Processo" },
   { href: "#projects", label: "Projetos" },
@@ -46,8 +46,8 @@ export function SiteHeader() {
             width={1200}
             height={902}
             priority
-            sizes="(max-width: 640px) 124px, (max-width: 768px) 138px, 164px"
-            className="h-7 w-auto max-w-none sm:h-8 md:h-9"
+            sizes="(max-width: 640px) 156px, (max-width: 768px) 172px, 196px"
+            className="h-9 w-auto max-w-none sm:h-10 md:h-11"
           />
         </a>
 
