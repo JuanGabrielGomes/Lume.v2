@@ -15,9 +15,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "LUME | Plataformas web premium",
+  title: "Lume Web | Sites profissionais para empresas",
   description:
-    "LUME desenvolve plataformas web, sistemas internos e automacoes para empresas que querem evoluir digitalmente.",
+    "A Lume Web desenvolve sites institucionais, landing pages e e-commerces modernos para empresas que querem crescer.",
 };
 
 export default function RootLayout({

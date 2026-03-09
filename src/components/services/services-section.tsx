@@ -6,24 +6,19 @@ import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
 
 const services = [
   {
-    title: "Plataformas Web",
+    title: "Sites institucionais",
     description:
-      "Produtos digitais sob medida com UX refinada, arquitetura limpa e foco em conversao.",
+      "Sites profissionais que apresentam sua empresa, seus serviços e sua proposta de valor com clareza e credibilidade.",
   },
   {
-    title: "Sistemas Internos",
+    title: "Landing pages",
     description:
-      "Ferramentas operacionais para centralizar processos, dados e decisao dentro da empresa.",
+      "Páginas criadas para campanhas, produtos ou serviços, pensadas para transformar visitantes em oportunidades de negócio.",
   },
   {
-    title: "Integracoes",
+    title: "E-commerce",
     description:
-      "Conectamos CRM, ERP, gateways e APIs para que a operacao rode sem friccao.",
-  },
-  {
-    title: "Automacao",
-    description:
-      "Fluxos automatizados que reduzem tarefas manuais e escalam a produtividade com seguranca.",
+      "Lojas virtuais rápidas, intuitivas e preparadas para crescer junto com o seu negócio.",
   },
 ];
 
@@ -36,15 +31,14 @@ export function ServicesSection() {
           whileInView="visible"
           viewport={viewport}
           variants={fadeUp}
-          className="max-w-2xl"
+          className="max-w-3xl"
         >
-          <span className="section-label">Servicos</span>
+          <span className="section-label">Serviços</span>
           <h2 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff7ef] md:text-5xl">
-            Estrutura digital pensada para crescer com sofisticacao.
+            O que desenvolvemos
           </h2>
-          <p className="mt-5 max-w-xl text-lg leading-8 text-[var(--muted)]">
-            Cada entrega combina design premium, clareza tecnica e uma camada
-            operacional que sustenta o negocio no longo prazo.
+          <p className="mt-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+            Criamos sites modernos e bem estruturados para empresas que querem apresentar seus serviços ou vender online.
           </p>
         </motion.div>
 
@@ -53,7 +47,7 @@ export function ServicesSection() {
           whileInView="visible"
           viewport={viewport}
           variants={staggerContainer}
-          className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4"
+          className="mt-12 grid gap-5 md:grid-cols-3"
         >
           {services.map((service, index) => (
             <motion.div key={service.title} variants={fadeUp}>

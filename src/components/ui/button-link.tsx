@@ -49,7 +49,7 @@ export function ButtonLink({
             repeatDelay: 2.8,
           }}
         >
-          ↗
+          {"->"}
         </motion.span>
       </span>
     </motion.a>

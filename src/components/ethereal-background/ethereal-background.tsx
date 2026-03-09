@@ -2,6 +2,7 @@
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
+import { useUiCapabilities } from "@/lib/ui/use-ui-capabilities";
 
 type RotatingPoints = {
   rotation: {
@@ -14,7 +15,7 @@ function Particles() {
   const points = useRef<RotatingPoints | null>(null);
 
   const positions = useMemo(() => {
-    const total = 2400;
+    const total = 1200;
     const buffer = new Float32Array(total * 3);
 
     for (let index = 0; index < total; index += 1) {
@@ -32,9 +33,8 @@ function Particles() {
       return;
     }
 
-    points.current.rotation.y = state.clock.elapsedTime * 0.018;
-    points.current.rotation.x =
-      Math.sin(state.clock.elapsedTime * 0.12) * 0.04;
+    points.current.rotation.y = state.clock.elapsedTime * 0.014;
+    points.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.08) * 0.028;
   });
 
   return (
@@ -49,8 +49,8 @@ function Particles() {
       </bufferGeometry>
       <pointsMaterial
         color="#f2c38d"
-        opacity={0.26}
-        size={0.028}
+        opacity={0.2}
+        size={0.024}
         sizeAttenuation
         transparent
         depthWrite={false}
@@ -60,12 +60,23 @@ function Particles() {
 }
 
 export function EtherealBackground() {
+  const { enableAmbientCanvas } = useUiCapabilities();
+
+  if (!enableAmbientCanvas) {
+    return null;
+  }
+
   return (
     <div
       aria-hidden
-      className="pointer-events-none fixed inset-0 -z-50 opacity-80"
+      className="pointer-events-none fixed inset-0 -z-50 opacity-70"
+      style={{ contain: "strict" }}
     >
-      <Canvas camera={{ position: [0, 0, 8], fov: 48 }} dpr={[1, 1.5]}>
+      <Canvas
+        camera={{ position: [0, 0, 8], fov: 48 }}
+        dpr={[1, 1.2]}
+        gl={{ antialias: false, alpha: true, powerPreference: "low-power" }}
+      >
         <Particles />
       </Canvas>
     </div>

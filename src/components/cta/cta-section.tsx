@@ -21,17 +21,15 @@ export function CtaSection() {
           </div>
 
           <h2 className="mx-auto max-w-3xl text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff9f2] md:text-6xl">
-            Vamos construir a plataforma que sua empresa precisa.
+            Vamos criar o site que sua empresa precisa.
           </h2>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[var(--muted)]">
-            Estrategia, design e engenharia reunidos em uma experiencia clara,
-            elegante e preparada para evoluir.
+
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-[rgba(243,240,235,0.72)] md:text-lg">
+            Se sua empresa precisa de um site profissional para apresentar seus serviços ou vender online, podemos ajudar.
           </p>
 
           <div className="mt-10 flex justify-center">
-            <ButtonLink href="mailto:contato@lume.dev">
-              Solicitar projeto
-            </ButtonLink>
+            <ButtonLink href="mailto:contato@lume.dev">Começar projeto</ButtonLink>
           </div>
         </motion.div>
       </div>

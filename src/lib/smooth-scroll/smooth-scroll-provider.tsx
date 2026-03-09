@@ -2,23 +2,26 @@
 
 import Lenis from "lenis";
 import { useEffect } from "react";
+import { useUiCapabilities } from "@/lib/ui/use-ui-capabilities";
 
 export function SmoothScrollProvider({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { enableSmoothScroll } = useUiCapabilities();
+
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (!enableSmoothScroll) {
       return;
     }
 
     const lenis = new Lenis({
-      duration: 1.15,
-      lerp: 0.09,
+      duration: 1,
+      lerp: 0.085,
       smoothWheel: true,
-      wheelMultiplier: 0.9,
-      touchMultiplier: 1.2,
+      wheelMultiplier: 0.88,
+      touchMultiplier: 1,
     });
 
     let frame = 0;
@@ -34,7 +37,7 @@ export function SmoothScrollProvider({
       window.cancelAnimationFrame(frame);
       lenis.destroy();
     };
-  }, []);
+  }, [enableSmoothScroll]);
 
   return children;
 }

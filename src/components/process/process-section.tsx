@@ -5,24 +5,24 @@ import { fadeUp, viewport } from "@/lib/animations";
 
 const steps = [
   {
-    title: "Estrategia",
+    title: "Estratégia",
     description:
-      "Mapeamos objetivos, contexto operacional e metas de crescimento para definir a plataforma certa.",
+      "Entendemos o objetivo do projeto e o que sua empresa precisa comunicar.",
   },
   {
-    title: "Arquitetura",
+    title: "Estrutura",
     description:
-      "Estruturamos fluxos, componentes e integracoes para garantir clareza tecnica desde o inicio.",
+      "Definimos a organização do site e como as informações serão apresentadas.",
   },
   {
     title: "Desenvolvimento",
     description:
-      "Construimos uma experiencia premium com codigo modular, rapido e preparado para iteracao.",
+      "Construímos o site com foco em performance, estabilidade e experiência.",
   },
   {
-    title: "Evolucao",
+    title: "Entrega",
     description:
-      "Acompanhamos a plataforma com melhorias continuas, novas automacoes e refinamento constante.",
+      "Seu site pronto para representar sua empresa online.",
   },
 ];
 
@@ -39,12 +39,8 @@ export function ProcessSection() {
         >
           <span className="section-label">Processo</span>
           <h2 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff7ef] md:text-5xl">
-            Um fluxo narrativo para tirar a complexidade do caminho.
+            Como trabalhamos
           </h2>
-          <p className="mt-5 max-w-md text-lg leading-8 text-[var(--muted)]">
-            A LUME trabalha em ciclos claros para transformar ambicao digital
-            em um produto que cresce com consistencia.
-          </p>
         </motion.div>
 
         <div className="relative">

@@ -7,22 +7,22 @@ import { fadeUp, staggerContainer, viewport } from "@/lib/animations";
 
 const projects = [
   {
-    title: "Pulse Analytics",
+    title: "Clara Consultoria",
     description:
-      "Uma plataforma executiva para consolidar indicadores, operacao comercial e previsao de crescimento em tempo real.",
-    tags: ["Dashboard", "BI Layer", "Integracoes"],
+      "Site institucional com estrutura clara, visual elegante e foco em apresentar serviços com credibilidade.",
+    tags: ["Institucional", "Conteúdo", "Performance"],
   },
   {
-    title: "Atlas Ops",
+    title: "Nova Energia",
     description:
-      "Sistema interno para coordenar times, fluxos e processos com automacoes que reduzem retrabalho e aumentam visibilidade.",
-    tags: ["Backoffice", "Workflows", "Automacao"],
+      "Landing page pensada para campanha, captação e apresentação objetiva da proposta da marca.",
+    tags: ["Landing page", "Conversão", "Mobile"],
   },
   {
-    title: "Aurora Commerce",
+    title: "Ateliê Aurora",
     description:
-      "Experiencia digital premium conectando catalogo, CRM e operacao logistica em uma unica camada de produto.",
-    tags: ["Commerce", "APIs", "Performance"],
+      "E-commerce com navegação intuitiva, página de produto bem resolvida e experiência fluida na compra.",
+    tags: ["E-commerce", "Catálogo", "Checkout"],
   },
 ];
 
@@ -40,12 +40,14 @@ export function ProjectsSection() {
           <div className="max-w-2xl">
             <span className="section-label">Projetos</span>
             <h2 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff7ef] md:text-5xl">
-              Interfaces e plataformas com presenca de produto, nao de
-              template.
+              Alguns projetos
             </h2>
+            <p className="mt-5 text-base leading-8 text-[var(--muted)]">
+              Cada empresa tem suas próprias necessidades. O site também precisa ser único.
+            </p>
           </div>
           <ButtonLink href="#cta" variant="secondary">
-            Conversar sobre um projeto
+            Criar meu site
           </ButtonLink>
         </motion.div>
 
@@ -74,7 +76,7 @@ export function ProjectsSection() {
 
                   <div className="rounded-[1.6rem] border border-white/10 bg-black/10 p-6">
                     <p className="text-sm uppercase tracking-[0.28em] text-[var(--muted)]">
-                      Componentes-chave
+                      Destaques
                     </p>
                     <div className="mt-6 flex flex-wrap gap-3">
                       {project.tags.map((tag) => (
