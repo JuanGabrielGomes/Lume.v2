@@ -18,7 +18,7 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-32 md:pb-24 md:pt-36"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pb-14 pt-28 md:pb-24 md:pt-36"
     >
       <HeroLightField activation={lampActivation} />
 
@@ -43,7 +43,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.4 }}
-            className="max-w-4xl text-balance text-[2.8rem] font-semibold leading-[1.02] tracking-[-0.05em] text-[#F6F2EC] sm:text-6xl lg:text-[5.15rem]"
+            className="max-w-4xl text-balance text-[2.55rem] font-semibold leading-[1.02] tracking-[-0.05em] text-[#F6F2EC] sm:text-6xl lg:text-[5.15rem]"
           >
             Sites profissionais para empresas que querem crescer.
           </motion.h1>
@@ -63,7 +63,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.8 }}
-            className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:gap-4"
+            className="mt-8 flex flex-col gap-3.5 sm:flex-row sm:gap-4"
           >
             <ButtonLink href="#cta">Criar meu site</ButtonLink>
             <ButtonLink href="#projects" variant="secondary">

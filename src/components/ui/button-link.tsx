@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { useUiCapabilities } from "@/lib/ui/use-ui-capabilities";
 
 type ButtonLinkProps = {
   href: string;
@@ -15,17 +16,25 @@ export function ButtonLink({
   variant = "primary",
   className = "",
 }: ButtonLinkProps) {
+  const prefersReducedMotion = useReducedMotion();
+  const { supportsHover, isMobileViewport } = useUiCapabilities();
   const buttonClass =
     variant === "primary" ? "primary-button" : "secondary-button";
+  const enableHoverMotion = supportsHover && !prefersReducedMotion;
+  const enableArrowLoop = variant === "primary" && !prefersReducedMotion && !isMobileViewport;
 
   return (
     <motion.a
       data-illuminate
       href={href}
-      whileHover={{
-        y: -3,
-        scale: variant === "primary" ? 1.025 : 1.015,
-      }}
+      whileHover={
+        enableHoverMotion
+          ? {
+              y: -3,
+              scale: variant === "primary" ? 1.025 : 1.015,
+            }
+          : undefined
+      }
       whileTap={{ scale: 0.985, y: -1 }}
       transition={{ type: "spring", stiffness: 340, damping: 24, mass: 0.7 }}
       className={`${buttonClass} group relative overflow-hidden ${className}`.trim()}
@@ -41,11 +50,11 @@ export function ButtonLink({
           aria-hidden
           className="text-base leading-none"
           initial={false}
-          animate={{ x: variant === "primary" ? [0, 4, 0] : 0 }}
+          animate={enableArrowLoop ? { x: [0, 4, 0] } : { x: 0 }}
           transition={{
             duration: 1.8,
             ease: "easeInOut",
-            repeat: Number.POSITIVE_INFINITY,
+            repeat: enableArrowLoop ? Number.POSITIVE_INFINITY : 0,
             repeatDelay: 2.8,
           }}
         >
