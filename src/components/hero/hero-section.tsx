@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -18,11 +18,11 @@ export function HeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-screen items-center overflow-hidden pb-24 pt-36"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pb-16 pt-32 md:pb-24 md:pt-36"
     >
       <HeroLightField activation={lampActivation} />
 
-      <div className="section-shell relative z-10 grid items-center gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)]">
+      <div className="section-shell relative z-10 grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(280px,0.72fr)] lg:gap-14">
         <motion.div
           className="max-w-4xl"
           initial={{ opacity: 0, y: 28 }}
@@ -33,7 +33,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.4 }}
-            className="mb-6 inline-flex items-center gap-3 text-[0.78rem] font-medium uppercase tracking-[0.26em] text-[rgba(243,240,235,0.58)]"
+            className="mb-5 inline-flex items-center gap-3 text-[0.72rem] font-medium uppercase tracking-[0.22em] text-[rgba(243,240,235,0.58)] sm:text-[0.78rem] sm:tracking-[0.26em]"
           >
             <span className="h-2 w-2 rounded-full bg-[#E8AE6B] shadow-[0_0_20px_rgba(232,174,107,0.75)]" />
             Desenvolvimento Web & Design Digital
@@ -43,7 +43,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.4 }}
-            className="max-w-4xl text-balance text-5xl font-semibold leading-[1.02] tracking-[-0.05em] text-[#F6F2EC] sm:text-6xl lg:text-[5.4rem]"
+            className="max-w-4xl text-balance text-[2.8rem] font-semibold leading-[1.02] tracking-[-0.05em] text-[#F6F2EC] sm:text-6xl lg:text-[5.15rem]"
           >
             Sites profissionais para empresas que querem crescer.
           </motion.h1>
@@ -52,17 +52,18 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.6 }}
-            className="mt-6 max-w-2xl text-lg leading-8 text-[rgba(243,240,235,0.68)] md:text-[1.22rem]"
+            className="mt-5 max-w-2xl text-base leading-7 text-[rgba(243,240,235,0.68)] sm:text-lg sm:leading-8 md:text-[1.16rem]"
           >
-            Desenvolvemos sites institucionais, landing pages e e-commerces modernos,
-            rápidos e bem estruturados para pequenas e médias empresas.
+            Desenvolvemos sites modernos, rápidos e bem estruturados para empresas
+            que querem transmitir credibilidade, organizar melhor sua presença
+            digital e crescer online.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: easeOutExpo, delay: 0.8 }}
-            className="mt-10 flex flex-col gap-4 sm:flex-row"
+            className="mt-9 flex flex-col gap-3.5 sm:flex-row sm:gap-4"
           >
             <ButtonLink href="#cta">Criar meu site</ButtonLink>
             <ButtonLink href="#projects" variant="secondary">
@@ -77,7 +78,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, ease: easeOutExpo, delay: 0.3 }}
           className="relative hidden lg:block"
         >
-          <InteractivePanel className="rounded-[2rem] p-6">
+          <InteractivePanel className="rounded-[1.85rem] p-5 xl:p-6">
             <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
               <span className="text-[0.72rem] uppercase tracking-[0.24em] text-[rgba(243,240,235,0.52)]">
                 Lume Web

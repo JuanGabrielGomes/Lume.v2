@@ -1,8 +1,8 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { ButtonLink } from "@/components/ui/button-link";
 
 const links = [
@@ -15,13 +15,19 @@ const links = [
 export function SiteHeader() {
   const { scrollY } = useScroll();
   const [scrolled, setScrolled] = useState(false);
+  const wasScrolled = useRef(false);
 
   useMotionValueEvent(scrollY, "change", (value) => {
-    setScrolled(value > 18);
+    const nextScrolled = value > 18;
+
+    if (nextScrolled !== wasScrolled.current) {
+      wasScrolled.current = nextScrolled;
+      setScrolled(nextScrolled);
+    }
   });
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 px-3 pt-3 md:px-4 md:pt-4">
+    <div className="fixed inset-x-0 top-0 z-50 px-2.5 pt-2.5 sm:px-3 sm:pt-3 md:px-4 md:pt-4">
       <motion.header
         initial={false}
         animate={{
@@ -33,12 +39,12 @@ export function SiteHeader() {
           backdropFilter: scrolled ? "blur(24px) saturate(140%)" : "blur(16px) saturate(120%)",
         }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-        className="mx-auto flex w-full max-w-7xl items-center justify-between rounded-full border px-3 py-2.5 md:px-5 md:py-3"
+        className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 rounded-[1.6rem] border px-3 py-2 sm:rounded-full sm:px-4 sm:py-2.5 md:px-5 md:py-3"
       >
         <a
           href="#main-content"
           aria-label="Lume Web"
-          className="flex shrink-0 items-center rounded-full pr-3 md:pr-4"
+          className="flex shrink-0 items-center rounded-full pr-2 sm:pr-3 md:pr-4"
         >
           <Image
             src="/lume-logo-v2-1-header.png"
@@ -46,31 +52,25 @@ export function SiteHeader() {
             width={1200}
             height={424}
             priority
-            sizes="(max-width: 640px) 168px, (max-width: 1024px) 184px, 208px"
-            className="h-9 w-auto max-w-none sm:h-10 md:h-11"
+            sizes="(max-width: 640px) 148px, (max-width: 1024px) 164px, 180px"
+            className="h-8 w-auto max-w-none sm:h-9 md:h-10"
           />
         </a>
 
-        <nav className="hidden items-center gap-4 lg:flex xl:gap-5">
+        <nav className="hidden items-center gap-3 lg:flex xl:gap-4">
           {links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="rounded-full px-2.5 py-1.5 text-[0.9rem] leading-none text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0]"
+              className="rounded-full px-2.5 py-1.5 text-[0.84rem] leading-none text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0] xl:text-[0.88rem]"
             >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 md:gap-2.5">
-          <a
-            href="#projects"
-            className="hidden rounded-full px-2.5 py-1.5 text-[0.9rem] leading-none text-[var(--muted)] transition-all duration-250 hover:bg-white/[0.06] hover:text-[#fff8f0] md:block"
-          >
-            Ver projetos
-          </a>
-          <ButtonLink href="#cta" className="px-3.5 py-2 text-[0.7rem] md:px-4.5 md:py-2.5 md:text-[0.82rem]">
+        <div className="flex shrink-0 items-center gap-2 md:gap-2.5">
+          <ButtonLink href="#cta" className="site-header-cta px-3.25 py-2 text-[0.72rem] whitespace-nowrap sm:px-3.5 sm:text-[0.76rem] md:px-4.5 md:py-2.5 md:text-[0.82rem]">
             Criar meu site
           </ButtonLink>
         </div>

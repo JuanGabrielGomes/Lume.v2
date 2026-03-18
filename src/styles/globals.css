@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --background: #4f4741;
@@ -50,9 +50,9 @@ body::before {
   background:
     linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-  background-size: 120px 120px;
+  background-size: 136px 136px;
   mask-image: radial-gradient(circle at center, black 35%, transparent 85%);
-  opacity: 0.16;
+  opacity: 0.12;
 }
 
 a {
@@ -70,11 +70,11 @@ a {
 }
 
 .section-shell {
-  @apply mx-auto w-full max-w-7xl px-4 md:px-10;
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-5 md:px-10;
 }
 
 .section-label {
-  @apply inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.06] px-4 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[rgba(243,240,235,0.7)] backdrop-blur-xl;
+  @apply inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.06] px-3.5 py-1.5 text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-[rgba(243,240,235,0.7)] backdrop-blur-xl sm:px-4 sm:py-2 sm:text-[0.72rem] sm:tracking-[0.32em];
 }
 
 .glass-panel {
@@ -83,7 +83,7 @@ a {
     radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 42%);
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(20px);
 }
 
 .interactive-panel {
@@ -209,12 +209,13 @@ a {
 
 @media (max-width: 767px) {
   body::before {
-    opacity: 0.08;
-    background-size: 160px 160px;
+    opacity: 0.06;
+    background-size: 180px 180px;
   }
 
   .glass-panel {
-    backdrop-filter: blur(18px);
+    box-shadow: 0 16px 42px rgba(14, 10, 8, 0.2);
+    backdrop-filter: blur(14px);
   }
 
   .interactive-panel {
@@ -233,7 +234,13 @@ a {
   .primary-button,
   .secondary-button {
     width: 100%;
-    min-height: 3.25rem;
+    min-height: 3rem;
+    padding-inline: 1.1rem;
+  }
+
+  .site-header-cta {
+    width: auto;
+    min-height: 0;
   }
 }
 

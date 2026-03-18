@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { fadeUp, viewport } from "@/lib/animations";
@@ -38,7 +38,7 @@ export function ProcessSection() {
           className="lg:sticky lg:top-24 lg:self-start"
         >
           <span className="section-label">Processo</span>
-          <h2 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff7ef] md:text-5xl">
+          <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-[#fff7ef] sm:text-4xl md:mt-6 md:text-5xl">
             Como trabalhamos
           </h2>
         </motion.div>
@@ -53,12 +53,12 @@ export function ProcessSection() {
                 whileInView="visible"
                 viewport={viewport}
                 variants={fadeUp}
-                className="relative rounded-[1.75rem] border border-white/10 bg-white/5 p-6 pl-14 backdrop-blur-xl"
+                className="relative rounded-[1.35rem] border border-white/10 bg-white/5 p-5 pl-14 backdrop-blur-xl md:rounded-[1.75rem] md:p-6 md:pl-14"
               >
                 <div className="absolute left-3 top-7 flex h-8 w-8 items-center justify-center rounded-full border border-[rgba(232,174,107,0.45)] bg-[rgba(232,174,107,0.18)] text-xs font-semibold text-[#fff3e1]">
                   0{index + 1}
                 </div>
-                <h3 className="text-2xl font-semibold tracking-[-0.03em] text-[#fff8f0]">
+                <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#fff8f0] md:text-2xl">
                   {step.title}
                 </h3>
                 <p className="mt-3 max-w-xl text-sm leading-7 text-[var(--muted)]">

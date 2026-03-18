@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { InteractivePanel } from "@/components/ui/interactive-panel";
@@ -36,10 +36,10 @@ export function TechStackSection() {
         >
           <div className="max-w-3xl">
             <span className="section-label">Tecnologia</span>
-            <h2 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff7ef] md:text-5xl">
+            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-[#fff7ef] sm:text-4xl md:mt-6 md:text-5xl">
               Tecnologia moderna e bem aplicada.
             </h2>
-            <p className="mt-5 text-base leading-8 text-[var(--muted)] md:text-lg">
+            <p className="mt-4 text-base leading-7 text-[var(--muted)] md:mt-5 md:text-lg md:leading-8">
               Cada projeto é desenvolvido com foco em performance, estabilidade e experiência do usuário. Criamos sites rápidos, bem estruturados e preparados para evoluir junto com a sua empresa.
             </p>
           </div>
@@ -50,11 +50,11 @@ export function TechStackSection() {
           whileInView="visible"
           viewport={viewport}
           variants={staggerContainer}
-          className="mt-12 grid gap-4 sm:grid-cols-2 xl:grid-cols-4"
+          className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 xl:grid-cols-4"
         >
           {differentiators.map((item) => (
             <motion.div key={item.title} variants={fadeUp}>
-              <InteractivePanel className="h-full rounded-[1.5rem] px-5 py-6">
+              <InteractivePanel className="h-full rounded-[1.3rem] px-4 py-5 md:rounded-[1.5rem] md:px-5 md:py-6">
                 <div className="flex items-center justify-between gap-5">
                   <span className="text-xl font-semibold tracking-[-0.03em] text-[#fff8f0]">
                     {item.title}

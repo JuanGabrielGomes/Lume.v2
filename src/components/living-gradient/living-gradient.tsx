@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import { useUiCapabilities } from "@/lib/ui/use-ui-capabilities";
@@ -46,7 +46,7 @@ export function LivingGradient() {
   const shouldReduceMotion = useReducedMotion();
   const { isMobileViewport } = useUiCapabilities();
   const animated = !shouldReduceMotion && !isMobileViewport;
-  const visibleBlobs = isMobileViewport ? blobs.slice(0, 2) : blobs;
+  const visibleBlobs = isMobileViewport ? blobs.slice(0, 1) : blobs;
 
   return (
     <div
@@ -56,7 +56,7 @@ export function LivingGradient() {
       {visibleBlobs.map((blob) => (
         <motion.div
           key={blob.className}
-          className={`absolute rounded-full mix-blend-screen blur-[100px] md:blur-[200px] ${blob.className}`}
+          className={`absolute rounded-full mix-blend-screen blur-[90px] md:blur-[200px] ${blob.className}`}
           animate={animated ? blob.animate : undefined}
           transition={
             animated

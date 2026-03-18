@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import {
   motion,
@@ -44,11 +44,11 @@ function StorySlide({
   return (
     <motion.div
       style={{ opacity, y, scale, filter }}
-      className={`absolute left-1/2 top-1/2 w-full max-w-6xl -translate-x-1/2 -translate-y-1/2 px-6 ${
+      className={`absolute left-1/2 top-1/2 w-full max-w-6xl -translate-x-1/2 -translate-y-1/2 px-5 sm:px-6 ${
         highlighted ? "text-gradient" : "text-[#fff8f0]"
       }`}
     >
-      <h2 className="text-balance text-3xl font-semibold leading-tight tracking-[-0.04em] sm:text-5xl lg:text-7xl">
+      <h2 className="text-balance text-[2rem] font-semibold leading-tight tracking-[-0.04em] sm:text-5xl lg:text-7xl">
         {text}
       </h2>
     </motion.div>
@@ -78,7 +78,7 @@ export function CinematicSection() {
   const vignetteFilter = useMotionTemplate`blur(${vignetteBlur}px)`;
 
   return (
-    <section ref={ref} className="relative h-[260vh] scroll-mt-28 md:h-[320vh]">
+    <section ref={ref} className="relative h-[220vh] scroll-mt-28 md:h-[320vh]">
       <div className="sticky top-0 flex h-screen items-center justify-center overflow-hidden">
         <motion.div className="section-shell relative text-center" style={{ y: stageY }}>
           <motion.div

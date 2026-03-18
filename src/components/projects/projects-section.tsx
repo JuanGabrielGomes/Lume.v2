@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -39,10 +39,10 @@ export function ProjectsSection() {
         >
           <div className="max-w-2xl">
             <span className="section-label">Projetos</span>
-            <h2 className="mt-6 text-balance text-4xl font-semibold tracking-[-0.04em] text-[#fff7ef] md:text-5xl">
+            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-[-0.04em] text-[#fff7ef] sm:text-4xl md:mt-6 md:text-5xl">
               Alguns projetos
             </h2>
-            <p className="mt-5 text-base leading-8 text-[var(--muted)]">
+            <p className="mt-4 text-base leading-7 text-[var(--muted)] md:mt-5 md:leading-8">
               Cada empresa tem suas próprias necessidades. O site também precisa ser único.
             </p>
           </div>
@@ -56,25 +56,25 @@ export function ProjectsSection() {
           whileInView="visible"
           viewport={viewport}
           variants={staggerContainer}
-          className="mt-12 grid gap-6"
+          className="mt-10 grid gap-5 md:mt-12 md:gap-6"
         >
           {projects.map((project, index) => (
             <motion.div key={project.title} variants={fadeUp}>
-              <InteractivePanel className="rounded-[2rem] p-8 md:p-10">
+              <InteractivePanel className="rounded-[1.5rem] p-5 md:rounded-[2rem] md:p-10">
                 <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
                   <div>
                     <div className="inline-flex rounded-full border border-white/10 bg-white/[0.06] px-4 py-2 text-xs uppercase tracking-[0.26em] text-[var(--muted)]">
                       Case 0{index + 1}
                     </div>
-                    <h3 className="mt-6 text-3xl font-semibold tracking-[-0.04em] text-[#fff8f0] md:text-4xl">
+                    <h3 className="mt-5 text-2xl font-semibold tracking-[-0.04em] text-[#fff8f0] md:mt-6 md:text-4xl">
                       {project.title}
                     </h3>
-                    <p className="mt-4 max-w-2xl text-base leading-8 text-[var(--muted)]">
+                    <p className="mt-4 max-w-2xl text-base leading-7 text-[var(--muted)] md:leading-8">
                       {project.description}
                     </p>
                   </div>
 
-                  <div className="rounded-[1.6rem] border border-white/10 bg-black/10 p-6">
+                  <div className="rounded-[1.2rem] border border-white/10 bg-black/10 p-5 md:rounded-[1.6rem] md:p-6">
                     <p className="text-sm uppercase tracking-[0.28em] text-[var(--muted)]">
                       Destaques
                     </p>
